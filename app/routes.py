@@ -64,6 +64,6 @@ def user(username):
     user = User.query.filter_by(username=username).first_or_404()
     posts = [
         {'author': user, 'body': 'Test post number 1'},
-        {'authpr': user, 'body': 'test post number 2'}
+        {'author': user, 'body': 'test post number 2'}
     ]
     return render_template('user.html', user=user, posts=posts)
