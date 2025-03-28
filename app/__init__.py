@@ -16,7 +16,7 @@ login = LoginManager(app)
 from app import routes, models, errors
 
 if not app.debug:
-    if app.confi['MAIL_SERVER']:
+    if app.config['MAIL_SERVER']:
         auth = None
         if app.config['MAIL_USERNAME'] or app.config['MAIL_PASSWORD']:
             auth = (app.config['MAIL_USERNAME'], app.config['MAIL_PASSWORD'])
