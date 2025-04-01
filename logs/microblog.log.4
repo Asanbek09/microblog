@@ -1,4 +1,4 @@
-2025-03-28 14:57:25,358 ERROR : Exception on /login [POST] [in /Users/asanbeksamudin/Documents/projects/mine/python/flask/microblog/venv/lib/python3.12/site-packages/flask/app.py:1414]
+2025-03-28 15:00:18,296 ERROR : Exception on /login [POST] [in /Users/asanbeksamudin/Documents/projects/mine/python/flask/microblog/venv/lib/python3.12/site-packages/flask/app.py:1414]
 Traceback (most recent call last):
   File "/Users/asanbeksamudin/Documents/projects/mine/python/flask/microblog/venv/lib/python3.12/site-packages/sqlalchemy/engine/base.py", line 1964, in _exec_single_context
     self.dialect.do_execute(
@@ -64,5 +64,6 @@ sqlalchemy.exc.OperationalError: (sqlite3.OperationalError) no such table: user
 FROM user 
 WHERE user.username = ?
  LIMIT ? OFFSET ?]
-[parameters: ('asanbek.best', 1, 0)]
+[parameters: ('asanbek_best', 1, 0)]
 (Background on this error at: https://sqlalche.me/e/20/e3q8)
+2025-03-28 15:01:01,815 INFO : Microblog startup [in /Users/asanbeksamudin/Documents/projects/mine/python/flask/microblog/microblog/app/__init__.py:40]

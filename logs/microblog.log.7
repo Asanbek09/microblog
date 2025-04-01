@@ -1,4 +1,16 @@
-2025-03-28 15:01:13,949 ERROR : Exception on /login [POST] [in /Users/asanbeksamudin/Documents/projects/mine/python/flask/microblog/venv/lib/python3.12/site-packages/flask/app.py:1414]
+2025-03-28 11:14:56,254 INFO : Microblog startup [in /Users/asanbeksamudin/Documents/projects/mine/python/flask/microblog/microblog/app/__init__.py:42]
+2025-03-28 11:15:05,940 INFO : Microblog startup [in /Users/asanbeksamudin/Documents/projects/mine/python/flask/microblog/microblog/app/__init__.py:42]
+2025-03-28 13:34:28,693 INFO : Microblog startup [in /Users/asanbeksamudin/Documents/projects/mine/python/flask/microblog/microblog/app/__init__.py:42]
+2025-03-28 13:35:28,984 INFO : Microblog startup [in /Users/asanbeksamudin/Documents/projects/mine/python/flask/microblog/microblog/app/__init__.py:42]
+2025-03-28 13:44:28,648 INFO : Microblog startup [in /Users/asanbeksamudin/Documents/projects/mine/python/flask/microblog/microblog/app/__init__.py:40]
+2025-03-28 13:48:35,556 INFO : Microblog startup [in /Users/asanbeksamudin/Documents/projects/mine/python/flask/microblog/microblog/app/__init__.py:40]
+2025-03-28 13:50:04,617 INFO : Microblog startup [in /Users/asanbeksamudin/Documents/projects/mine/python/flask/microblog/microblog/app/__init__.py:40]
+2025-03-28 13:50:54,373 INFO : Microblog startup [in /Users/asanbeksamudin/Documents/projects/mine/python/flask/microblog/microblog/app/__init__.py:40]
+2025-03-28 13:51:32,894 INFO : Microblog startup [in /Users/asanbeksamudin/Documents/projects/mine/python/flask/microblog/microblog/app/__init__.py:40]
+2025-03-28 13:53:56,862 INFO : Microblog startup [in /Users/asanbeksamudin/Documents/projects/mine/python/flask/microblog/microblog/app/__init__.py:40]
+2025-03-28 13:55:05,780 INFO : Microblog startup [in /Users/asanbeksamudin/Documents/projects/mine/python/flask/microblog/microblog/app/__init__.py:40]
+2025-03-28 14:56:07,552 INFO : Microblog startup [in /Users/asanbeksamudin/Documents/projects/mine/python/flask/microblog/microblog/app/__init__.py:40]
+2025-03-28 14:56:20,237 ERROR : Exception on /login [POST] [in /Users/asanbeksamudin/Documents/projects/mine/python/flask/microblog/venv/lib/python3.12/site-packages/flask/app.py:1414]
 Traceback (most recent call last):
   File "/Users/asanbeksamudin/Documents/projects/mine/python/flask/microblog/venv/lib/python3.12/site-packages/sqlalchemy/engine/base.py", line 1964, in _exec_single_context
     self.dialect.do_execute(
@@ -66,53 +78,3 @@ WHERE user.username = ?
  LIMIT ? OFFSET ?]
 [parameters: ('asanbek.best', 1, 0)]
 (Background on this error at: https://sqlalche.me/e/20/e3q8)
-2025-03-28 15:10:00,743 INFO : Microblog startup [in /Users/asanbeksamudin/Documents/projects/mine/python/flask/microblog/microblog/app/__init__.py:40]
-2025-03-28 15:10:23,405 INFO : Microblog startup [in /Users/asanbeksamudin/Documents/projects/mine/python/flask/microblog/microblog/app/__init__.py:40]
-2025-03-28 15:10:40,063 INFO : Microblog startup [in /Users/asanbeksamudin/Documents/projects/mine/python/flask/microblog/microblog/app/__init__.py:40]
-2025-03-28 15:10:56,242 INFO : Microblog startup [in /Users/asanbeksamudin/Documents/projects/mine/python/flask/microblog/microblog/app/__init__.py:40]
-2025-03-28 15:37:31,857 INFO : Microblog startup [in /Users/asanbeksamudin/Documents/projects/mine/python/flask/microblog/microblog/app/__init__.py:40]
-2025-03-28 15:37:43,725 ERROR : Exception on /index [GET] [in /Users/asanbeksamudin/Documents/projects/mine/python/flask/microblog/venv/lib/python3.12/site-packages/flask/app.py:1414]
-Traceback (most recent call last):
-  File "/Users/asanbeksamudin/Documents/projects/mine/python/flask/microblog/venv/lib/python3.12/site-packages/flask/app.py", line 2190, in wsgi_app
-    response = self.full_dispatch_request()
-               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-  File "/Users/asanbeksamudin/Documents/projects/mine/python/flask/microblog/venv/lib/python3.12/site-packages/flask/app.py", line 1486, in full_dispatch_request
-    rv = self.handle_user_exception(e)
-         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-  File "/Users/asanbeksamudin/Documents/projects/mine/python/flask/microblog/venv/lib/python3.12/site-packages/flask/app.py", line 1484, in full_dispatch_request
-    rv = self.dispatch_request()
-         ^^^^^^^^^^^^^^^^^^^^^^^
-  File "/Users/asanbeksamudin/Documents/projects/mine/python/flask/microblog/venv/lib/python3.12/site-packages/flask/app.py", line 1469, in dispatch_request
-    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)
-           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-  File "/Users/asanbeksamudin/Documents/projects/mine/python/flask/microblog/venv/lib/python3.12/site-packages/flask_login/utils.py", line 290, in decorated_view
-    return current_app.ensure_sync(func)(*args, **kwargs)
-           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-  File "/Users/asanbeksamudin/Documents/projects/mine/python/flask/microblog/microblog/app/routes.py", line 22, in index
-    return render_template('index.html', title='Home', form=form, posts=posts)
-           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-  File "/Users/asanbeksamudin/Documents/projects/mine/python/flask/microblog/venv/lib/python3.12/site-packages/flask/templating.py", line 151, in render_template
-    return _render(app, template, context)
-           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-  File "/Users/asanbeksamudin/Documents/projects/mine/python/flask/microblog/venv/lib/python3.12/site-packages/flask/templating.py", line 132, in _render
-    rv = template.render(context)
-         ^^^^^^^^^^^^^^^^^^^^^^^^
-  File "/Users/asanbeksamudin/Documents/projects/mine/python/flask/microblog/venv/lib/python3.12/site-packages/jinja2/environment.py", line 1295, in render
-    self.environment.handle_exception()
-  File "/Users/asanbeksamudin/Documents/projects/mine/python/flask/microblog/venv/lib/python3.12/site-packages/jinja2/environment.py", line 942, in handle_exception
-    raise rewrite_traceback_stack(source=source)
-  File "/Users/asanbeksamudin/Documents/projects/mine/python/flask/microblog/microblog/app/templates/index.html", line 1, in top-level template code
-    {% extends "base.html" %}
-  File "/Users/asanbeksamudin/Documents/projects/mine/python/flask/microblog/microblog/app/templates/base.html", line 31, in top-level template code
-    {% block content %}{% endblock %}
-    ^^^^^^^^^^^^^^^^^^^^^^^^^
-  File "/Users/asanbeksamudin/Documents/projects/mine/python/flask/microblog/microblog/app/templates/index.html", line 19, in block 'content'
-    {% include '_post.html' %}
-    ^^^^^^^^^^^^^^^^^^^^^^^^^
-  File "/Users/asanbeksamudin/Documents/projects/mine/python/flask/microblog/microblog/app/templates/_post.html", line 6, in top-level template code
-    {{ posts.author.username }}
-    ^^^^^^^^^^^^^^^^^^^^^^^^^
-  File "/Users/asanbeksamudin/Documents/projects/mine/python/flask/microblog/venv/lib/python3.12/site-packages/jinja2/environment.py", line 490, in getattr
-    return getattr(obj, attribute)
-           ^^^^^^^^^^^^^^^^^^^^^^^
-jinja2.exceptions.UndefinedError: 'list object' has no attribute 'author'

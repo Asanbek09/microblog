@@ -1,12 +1,21 @@
-2025-03-28 15:01:13,949 ERROR : Exception on /login [POST] [in /Users/asanbeksamudin/Documents/projects/mine/python/flask/microblog/venv/lib/python3.12/site-packages/flask/app.py:1414]
+2025-04-01 07:49:24,374 ERROR : Exception on /favicon.ico [GET] [in /Users/asanbeksamudin/Documents/projects/mine/python/flask/microblog/venv/lib/python3.12/site-packages/flask/app.py:1414]
 Traceback (most recent call last):
-  File "/Users/asanbeksamudin/Documents/projects/mine/python/flask/microblog/venv/lib/python3.12/site-packages/sqlalchemy/engine/base.py", line 1964, in _exec_single_context
-    self.dialect.do_execute(
-  File "/Users/asanbeksamudin/Documents/projects/mine/python/flask/microblog/venv/lib/python3.12/site-packages/sqlalchemy/engine/default.py", line 942, in do_execute
-    cursor.execute(statement, parameters)
-sqlite3.OperationalError: no such table: user
+  File "/Users/asanbeksamudin/Documents/projects/mine/python/flask/microblog/venv/lib/python3.12/site-packages/flask/app.py", line 1484, in full_dispatch_request
+    rv = self.dispatch_request()
+         ^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/asanbeksamudin/Documents/projects/mine/python/flask/microblog/venv/lib/python3.12/site-packages/flask/app.py", line 1458, in dispatch_request
+    self.raise_routing_exception(req)
+  File "/Users/asanbeksamudin/Documents/projects/mine/python/flask/microblog/venv/lib/python3.12/site-packages/flask/app.py", line 1440, in raise_routing_exception
+    raise request.routing_exception  # type: ignore
+    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/asanbeksamudin/Documents/projects/mine/python/flask/microblog/venv/lib/python3.12/site-packages/flask/ctx.py", line 353, in match_request
+    result = self.url_adapter.match(return_rule=True)  # type: ignore
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/asanbeksamudin/Documents/projects/mine/python/flask/microblog/venv/lib/python3.12/site-packages/werkzeug/routing/map.py", line 655, in match
+    raise NotFound() from None
+werkzeug.exceptions.NotFound: 404 Not Found: The requested URL was not found on the server. If you entered the URL manually please check your spelling and try again.
 
-The above exception was the direct cause of the following exception:
+During handling of the above exception, another exception occurred:
 
 Traceback (most recent call last):
   File "/Users/asanbeksamudin/Documents/projects/mine/python/flask/microblog/venv/lib/python3.12/site-packages/flask/app.py", line 2190, in wsgi_app
@@ -15,82 +24,15 @@ Traceback (most recent call last):
   File "/Users/asanbeksamudin/Documents/projects/mine/python/flask/microblog/venv/lib/python3.12/site-packages/flask/app.py", line 1486, in full_dispatch_request
     rv = self.handle_user_exception(e)
          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-  File "/Users/asanbeksamudin/Documents/projects/mine/python/flask/microblog/venv/lib/python3.12/site-packages/flask/app.py", line 1484, in full_dispatch_request
-    rv = self.dispatch_request()
-         ^^^^^^^^^^^^^^^^^^^^^^^
-  File "/Users/asanbeksamudin/Documents/projects/mine/python/flask/microblog/venv/lib/python3.12/site-packages/flask/app.py", line 1469, in dispatch_request
-    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)
-           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-  File "/Users/asanbeksamudin/Documents/projects/mine/python/flask/microblog/microblog/app/routes.py", line 32, in login
-    user = User.query.filter_by(username=form.username.data).first()
-           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-  File "/Users/asanbeksamudin/Documents/projects/mine/python/flask/microblog/venv/lib/python3.12/site-packages/sqlalchemy/orm/query.py", line 2759, in first
-    return self.limit(1)._iter().first()  # type: ignore
-           ^^^^^^^^^^^^^^^^^^^^^
-  File "/Users/asanbeksamudin/Documents/projects/mine/python/flask/microblog/venv/lib/python3.12/site-packages/sqlalchemy/orm/query.py", line 2858, in _iter
-    result: Union[ScalarResult[_T], Result[_T]] = self.session.execute(
-                                                  ^^^^^^^^^^^^^^^^^^^^^
-  File "/Users/asanbeksamudin/Documents/projects/mine/python/flask/microblog/venv/lib/python3.12/site-packages/sqlalchemy/orm/session.py", line 2365, in execute
-    return self._execute_internal(
-           ^^^^^^^^^^^^^^^^^^^^^^^
-  File "/Users/asanbeksamudin/Documents/projects/mine/python/flask/microblog/venv/lib/python3.12/site-packages/sqlalchemy/orm/session.py", line 2251, in _execute_internal
-    result: Result[Any] = compile_state_cls.orm_execute_statement(
-                          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-  File "/Users/asanbeksamudin/Documents/projects/mine/python/flask/microblog/venv/lib/python3.12/site-packages/sqlalchemy/orm/context.py", line 306, in orm_execute_statement
-    result = conn.execute(
-             ^^^^^^^^^^^^^
-  File "/Users/asanbeksamudin/Documents/projects/mine/python/flask/microblog/venv/lib/python3.12/site-packages/sqlalchemy/engine/base.py", line 1416, in execute
-    return meth(
-           ^^^^^
-  File "/Users/asanbeksamudin/Documents/projects/mine/python/flask/microblog/venv/lib/python3.12/site-packages/sqlalchemy/sql/elements.py", line 523, in _execute_on_connection
-    return connection._execute_clauseelement(
-           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-  File "/Users/asanbeksamudin/Documents/projects/mine/python/flask/microblog/venv/lib/python3.12/site-packages/sqlalchemy/engine/base.py", line 1638, in _execute_clauseelement
-    ret = self._execute_context(
-          ^^^^^^^^^^^^^^^^^^^^^^
-  File "/Users/asanbeksamudin/Documents/projects/mine/python/flask/microblog/venv/lib/python3.12/site-packages/sqlalchemy/engine/base.py", line 1843, in _execute_context
-    return self._exec_single_context(
-           ^^^^^^^^^^^^^^^^^^^^^^^^^^
-  File "/Users/asanbeksamudin/Documents/projects/mine/python/flask/microblog/venv/lib/python3.12/site-packages/sqlalchemy/engine/base.py", line 1983, in _exec_single_context
-    self._handle_dbapi_exception(
-  File "/Users/asanbeksamudin/Documents/projects/mine/python/flask/microblog/venv/lib/python3.12/site-packages/sqlalchemy/engine/base.py", line 2352, in _handle_dbapi_exception
-    raise sqlalchemy_exception.with_traceback(exc_info[2]) from e
-  File "/Users/asanbeksamudin/Documents/projects/mine/python/flask/microblog/venv/lib/python3.12/site-packages/sqlalchemy/engine/base.py", line 1964, in _exec_single_context
-    self.dialect.do_execute(
-  File "/Users/asanbeksamudin/Documents/projects/mine/python/flask/microblog/venv/lib/python3.12/site-packages/sqlalchemy/engine/default.py", line 942, in do_execute
-    cursor.execute(statement, parameters)
-sqlalchemy.exc.OperationalError: (sqlite3.OperationalError) no such table: user
-[SQL: SELECT user.id AS user_id, user.username AS user_username, user.email AS user_email, user.password_hash AS user_password_hash, user.about_me AS user_about_me, user.last_seen AS user_last_seen 
-FROM user 
-WHERE user.username = ?
- LIMIT ? OFFSET ?]
-[parameters: ('asanbek.best', 1, 0)]
-(Background on this error at: https://sqlalche.me/e/20/e3q8)
-2025-03-28 15:10:00,743 INFO : Microblog startup [in /Users/asanbeksamudin/Documents/projects/mine/python/flask/microblog/microblog/app/__init__.py:40]
-2025-03-28 15:10:23,405 INFO : Microblog startup [in /Users/asanbeksamudin/Documents/projects/mine/python/flask/microblog/microblog/app/__init__.py:40]
-2025-03-28 15:10:40,063 INFO : Microblog startup [in /Users/asanbeksamudin/Documents/projects/mine/python/flask/microblog/microblog/app/__init__.py:40]
-2025-03-28 15:10:56,242 INFO : Microblog startup [in /Users/asanbeksamudin/Documents/projects/mine/python/flask/microblog/microblog/app/__init__.py:40]
-2025-03-28 15:37:31,857 INFO : Microblog startup [in /Users/asanbeksamudin/Documents/projects/mine/python/flask/microblog/microblog/app/__init__.py:40]
-2025-03-28 15:37:43,725 ERROR : Exception on /index [GET] [in /Users/asanbeksamudin/Documents/projects/mine/python/flask/microblog/venv/lib/python3.12/site-packages/flask/app.py:1414]
-Traceback (most recent call last):
-  File "/Users/asanbeksamudin/Documents/projects/mine/python/flask/microblog/venv/lib/python3.12/site-packages/flask/app.py", line 2190, in wsgi_app
-    response = self.full_dispatch_request()
-               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-  File "/Users/asanbeksamudin/Documents/projects/mine/python/flask/microblog/venv/lib/python3.12/site-packages/flask/app.py", line 1486, in full_dispatch_request
-    rv = self.handle_user_exception(e)
-         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-  File "/Users/asanbeksamudin/Documents/projects/mine/python/flask/microblog/venv/lib/python3.12/site-packages/flask/app.py", line 1484, in full_dispatch_request
-    rv = self.dispatch_request()
-         ^^^^^^^^^^^^^^^^^^^^^^^
-  File "/Users/asanbeksamudin/Documents/projects/mine/python/flask/microblog/venv/lib/python3.12/site-packages/flask/app.py", line 1469, in dispatch_request
-    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)
-           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-  File "/Users/asanbeksamudin/Documents/projects/mine/python/flask/microblog/venv/lib/python3.12/site-packages/flask_login/utils.py", line 290, in decorated_view
-    return current_app.ensure_sync(func)(*args, **kwargs)
-           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-  File "/Users/asanbeksamudin/Documents/projects/mine/python/flask/microblog/microblog/app/routes.py", line 22, in index
-    return render_template('index.html', title='Home', form=form, posts=posts)
-           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/asanbeksamudin/Documents/projects/mine/python/flask/microblog/venv/lib/python3.12/site-packages/flask/app.py", line 1341, in handle_user_exception
+    return self.handle_http_exception(e)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/asanbeksamudin/Documents/projects/mine/python/flask/microblog/venv/lib/python3.12/site-packages/flask/app.py", line 1281, in handle_http_exception
+    return self.ensure_sync(handler)(e)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/asanbeksamudin/Documents/projects/mine/python/flask/microblog/microblog/app/errors.py", line 6, in not_found_error
+    return render_template('404.html'), 404
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^
   File "/Users/asanbeksamudin/Documents/projects/mine/python/flask/microblog/venv/lib/python3.12/site-packages/flask/templating.py", line 151, in render_template
     return _render(app, template, context)
            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
@@ -101,18 +43,46 @@ Traceback (most recent call last):
     self.environment.handle_exception()
   File "/Users/asanbeksamudin/Documents/projects/mine/python/flask/microblog/venv/lib/python3.12/site-packages/jinja2/environment.py", line 942, in handle_exception
     raise rewrite_traceback_stack(source=source)
-  File "/Users/asanbeksamudin/Documents/projects/mine/python/flask/microblog/microblog/app/templates/index.html", line 1, in top-level template code
+  File "/Users/asanbeksamudin/Documents/projects/mine/python/flask/microblog/microblog/app/templates/404.html", line 1, in top-level template code
     {% extends "base.html" %}
-  File "/Users/asanbeksamudin/Documents/projects/mine/python/flask/microblog/microblog/app/templates/base.html", line 31, in top-level template code
+  File "/Users/asanbeksamudin/Documents/projects/mine/python/flask/microblog/venv/lib/python3.12/site-packages/jinja2/environment.py", line 942, in handle_exception
+    raise rewrite_traceback_stack(source=source)
+  File "/Users/asanbeksamudin/Documents/projects/mine/python/flask/microblog/microblog/app/templates/base.html", line 30, in template
     {% block content %}{% endblock %}
     ^^^^^^^^^^^^^^^^^^^^^^^^^
-  File "/Users/asanbeksamudin/Documents/projects/mine/python/flask/microblog/microblog/app/templates/index.html", line 19, in block 'content'
-    {% include '_post.html' %}
+jinja2.exceptions.TemplateAssertionError: block 'content' defined twice
+2025-04-01 07:49:26,854 ERROR : Exception on /login [GET] [in /Users/asanbeksamudin/Documents/projects/mine/python/flask/microblog/venv/lib/python3.12/site-packages/flask/app.py:1414]
+Traceback (most recent call last):
+  File "/Users/asanbeksamudin/Documents/projects/mine/python/flask/microblog/venv/lib/python3.12/site-packages/flask/app.py", line 2190, in wsgi_app
+    response = self.full_dispatch_request()
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/asanbeksamudin/Documents/projects/mine/python/flask/microblog/venv/lib/python3.12/site-packages/flask/app.py", line 1486, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/asanbeksamudin/Documents/projects/mine/python/flask/microblog/venv/lib/python3.12/site-packages/flask/app.py", line 1484, in full_dispatch_request
+    rv = self.dispatch_request()
+         ^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/asanbeksamudin/Documents/projects/mine/python/flask/microblog/venv/lib/python3.12/site-packages/flask/app.py", line 1469, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/asanbeksamudin/Documents/projects/mine/python/flask/microblog/microblog/app/routes.py", line 43, in login
+    return render_template('login.html', title='Sign In', form=form)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/asanbeksamudin/Documents/projects/mine/python/flask/microblog/venv/lib/python3.12/site-packages/flask/templating.py", line 151, in render_template
+    return _render(app, template, context)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/asanbeksamudin/Documents/projects/mine/python/flask/microblog/venv/lib/python3.12/site-packages/flask/templating.py", line 132, in _render
+    rv = template.render(context)
+         ^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/asanbeksamudin/Documents/projects/mine/python/flask/microblog/venv/lib/python3.12/site-packages/jinja2/environment.py", line 1295, in render
+    self.environment.handle_exception()
+  File "/Users/asanbeksamudin/Documents/projects/mine/python/flask/microblog/venv/lib/python3.12/site-packages/jinja2/environment.py", line 942, in handle_exception
+    raise rewrite_traceback_stack(source=source)
+  File "/Users/asanbeksamudin/Documents/projects/mine/python/flask/microblog/microblog/app/templates/login.html", line 1, in top-level template code
+    {% extends "base.html" %}
+  File "/Users/asanbeksamudin/Documents/projects/mine/python/flask/microblog/venv/lib/python3.12/site-packages/jinja2/environment.py", line 942, in handle_exception
+    raise rewrite_traceback_stack(source=source)
+  File "/Users/asanbeksamudin/Documents/projects/mine/python/flask/microblog/microblog/app/templates/base.html", line 30, in template
+    {% block content %}{% endblock %}
     ^^^^^^^^^^^^^^^^^^^^^^^^^
-  File "/Users/asanbeksamudin/Documents/projects/mine/python/flask/microblog/microblog/app/templates/_post.html", line 6, in top-level template code
-    {{ posts.author.username }}
-    ^^^^^^^^^^^^^^^^^^^^^^^^^
-  File "/Users/asanbeksamudin/Documents/projects/mine/python/flask/microblog/venv/lib/python3.12/site-packages/jinja2/environment.py", line 490, in getattr
-    return getattr(obj, attribute)
-           ^^^^^^^^^^^^^^^^^^^^^^^
-jinja2.exceptions.UndefinedError: 'list object' has no attribute 'author'
+jinja2.exceptions.TemplateAssertionError: block 'content' defined twice
