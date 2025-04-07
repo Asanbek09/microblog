@@ -123,3 +123,6 @@ class SearchableMixin(object):
     def reindex(cls):
         for obj in cls.query:
             add_to_index(cls.__tablename__, obj)
+
+db.event.listen(db.session, 'before_commit', Post.before_commit)
+db.event.listen(db.session, 'after_commit', Post.after_commit)
